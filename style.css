@@ -1,0 +1,408 @@
+html {
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cal Sans', sans-serif;
+    background: #222e60;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.portada {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10vh;
+    background: #000;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+.carrusel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.carrusel img.activo {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #000000d2;
+    border-radius: 0 0 150px 150px;
+    z-index: 3;
+    width: calc(100% - 30px);
+    height: 8.5vh;
+    padding: 5px 0;
+    left: 15px;
+}
+
+.footer {
+    height: 9vh;
+    position: fixed;
+    bottom: 0;
+    left:15px;
+    width: calc(100% - 30px);
+    background: #000000d2;
+    color: #fff;
+    font-size: 35px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 3;
+    border-radius: 150px 150px 0 0;
+
+    p {
+        margin: 1vh auto;
+        width: max-content;
+    }
+}
+
+nav .logo {
+    max-height: 7.5vh;
+}
+
+nav .bandera {
+    width: 5vh;
+    height: 5vh;
+    margin: 1vh;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1.5px solid #fff;
+    object-fit: cover;
+
+}
+
+h1 {
+    text-align: center;
+    background: #fff;
+    margin-top: 0;
+    padding: 10px;
+
+}
+
+.productos {
+    min-height: 41.2vh;
+    padding-bottom: 11.2vh;
+    background: #222e60;
+    display: flex;
+    flex-wrap: wrap;
+    border: 15px solid #fff;
+    border-bottom:none;
+    width:100%;
+
+    .vinos,
+    .ensaladas,
+    .arroces,
+    .carnes {
+        margin-top: 40px;
+    }
+}
+
+.margen {
+    margin: 0 !important;
+}
+
+.info {
+    text-align: center;
+    padding: 0 10px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.info.pie {
+    max-width: 80%;
+    margin: auto;
+}
+
+.info.pizzas {
+    justify-content: center;
+
+    span {
+        padding: 5px;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 35px;
+    }
+}
+
+.info.hamburguesas {
+    justify-content: space-between;
+    max-width: 85%;
+    margin: 0 auto;
+
+    span {
+        padding: 5px;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 35px;
+    }
+}
+
+.seccion {
+    margin: 20px auto;
+    width: 25%;
+
+    ul {
+        margin: 0;
+        padding: 20px 20px;
+        background: #222e60;
+    }
+
+}
+
+li {
+    box-shadow: 3px 3px 6px rgb(232, 224, 224);
+    padding: 10px;
+    padding-bottom: 0.83em;
+    border-radius: 20px;
+    background: #ffffffe1;
+    border: 1.5px solid #fff;
+    margin-bottom: 20px;
+}
+
+li::marker {
+    color: transparent;
+}
+
+li .muestra {
+    max-width: 80%;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid #332f2f;
+    margin: auto;
+    display: block;
+    margin-bottom: 5px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.descripcion-plato {
+    text-align: left;
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 34px;
+}
+
+.titulo_principal {
+
+    background: #b75a03;
+    border-bottom: 2px solid #332f2f;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    max-width: max-content;
+    height: 8vh;
+    padding: 0 20px;
+    margin: auto;
+
+    h1 {
+        color: white;
+        background: none;
+        margin: 0;
+        font-size: 60px;
+        text-align: left;
+        display: none;
+    }
+
+    img {
+        max-width: 6vh;
+        object-fit: contain;
+    }
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+    margin: 0 auto;
+
+    h2 {
+        text-align: center;
+        font-size: 70px;
+    }
+}
+
+.alergenos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    img {
+        aspect-ratio: 1/1;
+        max-width: 5vh;
+        object-fit: contain;
+        background: #fff;
+        border-radius: 50%;
+    }
+}
+
+.texto-alergenos {
+    max-width: 60%;
+    text-align: center;
+    margin: 15px auto;
+    background: #d88303;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+li p {
+    margin-top: 0;
+}
+
+.precios {
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.precio-articulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    color: #fff;
+    background: #222e60;
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    padding: 12px 22px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.precio-sala,
+.precio-terraza {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    margin-right: 0.3em;
+}
+
+
+.vinos {
+
+    .muestra {
+        aspect-ratio: 9/16;
+        max-width: 30%;
+        max-height: 90%;
+        border-color: transparent;
+    }
+
+    .titulo-region {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        h2 {
+            color: #fff;
+            width: max-content;
+            text-align: center;
+            font-size: 55px;
+        }
+
+        span {
+            color: #fff;
+            font-size: 0.7em;
+        }
+
+        .mapa {
+            max-width: 20vh;
+        }
+    }
+
+    .vino {
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        margin: 10px auto;
+
+        .descripcion-plato {
+            margin: 0 auto;
+            padding: 0 5% 0 2.5%;
+            font-size: 40px;
+            max-width: 65% !important;
+
+        }
+    }
+
+}
+
+/* @media (min-width: 600px) {
+    .titulo_principal {
+        h1 {
+            font-size: 36px;
+        }
+    }
+
+    .titulo {
+        h2 {
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+
+    .descripcion-plato {
+        font-size: 26px;
+    }
+
+    .vinos {
+        .titulo h2 {
+            font-size: 24px;
+        }
+    }
+
+    .vino {
+
+
+        .descripcion-plato {
+            font-size: 20px !important;
+        }
+    }
+
+    .precio-articulo {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .footer {
+        p,span {
+            font-size: 20px !important;
+        }
+    }
+} */

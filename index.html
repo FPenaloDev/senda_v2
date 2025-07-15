@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Senda 44</title>
+    <link rel="icon" href="recursos/logo_senda_negro.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <nav>
+            <img class="bandera" src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="Español">
+            <img class="bandera" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+                alt="Inglés" height="20px" style="object-fit: cover;">
+            <img class="bandera"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/500px-Flag_of_France.svg.png"
+                alt="Francés">
+        </nav>
+        <div class="portada">
+            <div class="carrusel">
+                <img src="recursos/pollos.png" class="activo" alt="">
+                <img src="recursos/mojitos_helados.png" alt="">
+                <img src="recursos/portada_h.png" alt="">
+            </div>
+        </div>
+        <script>
+            const imagenes = document.querySelectorAll(".carrusel img");
+            let index = 0;
+
+            setInterval(() => {
+                imagenes[index].classList.remove("activo");
+                index = (index + 1) % imagenes.length;
+                imagenes[index].classList.add("activo");
+            }, 6000); // 5 segundos
+        </script>
+
+        <div class="productos">
+            <div class="vinos seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Vinos.png" alt="">
+                    <h1>VINOS</h1>
+                </div>
+                <ul>
+                    <div class="titulo-region">
+                        <h2>RIOJA<br><span>La Rioja, Álava, Navarra</span></h2>
+                        <img class="mapa" src="recursos/vinos/rioja.png">
+                    </div>
+                    <li class="vinos1">
+                        <div class="titulo">
+                            <h2>AZPILICUETA</h2>
+                        </div>
+                        <div class="vino">
+                            <img class="muestra" src="recursos/vinos/azpilicueta.png" alt="">
+                            <p class="descripcion-plato">
+                                Azpilicueta Rioja es un vino tinto elegante y equilibrado. Presenta aromas a frutas
+                                rojas
+                                maduras como cereza y ciruela, combinadas con notas especiadas, vainilla y un toque de
+                                madera. En boca es suave, con taninos redondos y un final largo y armonioso.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos2">
+                        <div class="titulo">
+                            <h2>RAMÓN Y BILBAO</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/bilbao.png" alt="">
+                            <p class="descripcion-plato">
+                                Ramón Bilbao Rioja es un vino tinto con carácter moderno y expresivo. Destaca por sus
+                                aromas
+                                intensos a frutas negras como mora y ciruela, acompañados de toques de regaliz, cacao y
+                                sutil roble tostado. En boca es sabroso, estructurado, con taninos firmes pero pulidos y
+                                un
+                                final persistente y especiado.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos3">
+                        <div class="titulo">
+                            <h2>MARQUES DE CACERES</h2>
+                        </div>
+                        <div class="vino">
+                            <img class="muestra" src="recursos/vinos/marques.png" alt="">
+                            <p class="descripcion-plato">
+                                Marqués de Cáceres Rioja es un vino tinto clásico, refinado y equilibrado. Ofrece aromas
+                                a
+                                frutas rojas como frambuesa y cereza, combinados con notas de especias suaves, vainilla
+                                y un
+                                fondo tostado. En boca es redondo, con taninos sedosos y un final elegante y
+                                persistente.
+                            </p>
+                        </div>
+                    </li>
+                    <!--                     <li class="vinos4">
+                        <div class="titulo">
+                            <h2>CAMINO DE CASTILLA</h2>
+                        </div>
+                        <img class="muestra" src="recursos/vinos/camino-castilla.png" alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                    </li> -->
+                    <div class="titulo-region">
+                        <h2>RIBERA<br><span>Valladolid, Soria<br> Burgos, Segovia</span></h2>
+                        <img class="mapa" src="recursos/vinos/ribera.png">
+                    </div>
+                    <li class="vinos5">
+                        <div class="titulo">
+                            <h2>PINNA FIDELIS</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/Pinna.png" alt="">
+                            <p class="descripcion-plato">
+                                Pinna Fidelis Ribera del Duero es un vino tinto intenso y con personalidad. Desprende
+                                aromas
+                                profundos de frutas negras maduras como mora y arándano, junto a notas de café, cacao y
+                                especias dulces provenientes de su crianza en barrica. En boca es potente, con buena
+                                estructura, taninos firmes y un final largo y envolvente.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos6">
+                        <div class="titulo">
+                            <h2>PORTIA</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/portia.png" alt="">
+                            <p class="descripcion-plato">
+                                Portia Ribera del Duero es un vino tinto moderno y elegante. En nariz presenta aromas
+                                intensos de frutas negras maduras como ciruela y mora, con toques de vainilla,
+                                torrefactos y
+                                especias. En boca es estructurado, con taninos suaves y bien integrados, y un final
+                                persistente con notas balsámicas y minerales.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos7">
+                        <div class="titulo">
+                            <h2>PROTOS</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/PROTOS.png" alt="">
+                            <p class="descripcion-plato">
+                                Protos Ribera del Duero es un vino tinto robusto y elegante. En nariz ofrece aromas
+                                intensos
+                                de frutas negras maduras como ciruela y mora, acompañados de notas tostadas, regaliz y
+                                un
+                                fondo especiado. En boca es redondo y equilibrado, con taninos firmes pero pulidos y un
+                                final largo y sabroso que refleja su crianza en barrica.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos8">
+                        <div class="titulo">
+                            <h2>ME & YOU</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/me_you.png" alt="">
+                            <p class="descripcion-plato">
+                                Me & You Ribera del Duero es un vino tinto joven, fresco y fácil de beber. En nariz
+                                destacan
+                                las frutas rojas y negras como cereza y mora, con sutiles notas florales y un toque de
+                                regaliz. En boca es suave, afrutado y equilibrado, con taninos amables y un final
+                                agradable
+                                que invita a seguir bebiendo.
+                            </p>
+                        </div>
+                    </li>
+                    <!--                     <li class="vinos9">
+                        <div class="titulo">
+                            <h2>CAMINO DE CASTILLA (RIBERA)</h2>
+                        </div>
+                        <img class="muestra" src="recursos/vinos/camino-castilla.png" alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                    </li> -->
+                    <div class="titulo-region">
+                        <h2>RUEDA Y VERDEJO<br><span>Valladolid, Segovia, Ávila</span></h2>
+                        <img src="recursos/vinos/verdejo-rueda.png" alt="" class="mapa">
+                    </div>
+                    <li class="vinos9">
+                        <div class="titulo">
+                            <h2>BLANCO LA SECA</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/Laseca.png" alt="">
+                            <p class="descripcion-plato">
+                                Blanco La Seca es un vino blanco joven, fresco y aromático, elaborado principalmente con
+                                uva
+                                Verdejo. Presenta aromas intensos a frutas tropicales y cítricas como piña, pomelo y
+                                lima,
+                                junto con notas herbáceas y un toque anisado. En boca es vivo, con buena acidez, paso
+                                ligero
+                                y un final refrescante y persistente.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos10">
+                        <div class="titulo">
+                            <h2>ALMA</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/alma.png" alt="">
+                            <p class="descripcion-plato">
+                                Alma es un vino blanco joven y vibrante, elaborado con uvas Verdejo. En nariz ofrece
+                                aromas
+                                de frutas blancas como manzana y pera, junto con notas cítricas, florales y un sutil
+                                toque
+                                herbáceo. En boca es fresco, con buena acidez, textura suave y un final limpio y
+                                afrutado.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos11">
+                        <div class="titulo">
+                            <h2>ÁRABE</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/arabe.png" alt="">
+                            <p class="descripcion-plato">
+                                Árabe es un vino blanco elegante, presentado en una distintiva botella azul. De sabor
+                                suave y afrutado, destaca por su frescura y aromas exóticos que evocan tierras lejanas.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos12">
+                        <div class="titulo">
+                            <h2>CAMPUSTAURU</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/capustauru.png" alt="">
+                            <p class="descripcion-plato">
+                                Campustauru Verdejo es un vino blanco vibrante elaborado con uvas Verdejo, típico de la
+                                región de Rueda. Destaca por su frescura, notas cítricas y herbales, y un final limpio y
+                                persistente.
+                            </p>
+                        </div>
+                    </li>
+                    <div class="titulo-region">
+                        <h2>ESPUMOSOS</h2>
+                    </div>
+                    <li class="vinos13">
+                        <div class="titulo">
+                            <h2>YLLERA 5.5</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/Yllera.png" alt="">
+                            <p class="descripcion-plato">
+                                Yllera 5.5 es un vino blanco frizzante, joven, dulce y ligeramente espumoso. Ofrece
+                                intensos
+                                aromas a frutas tropicales como piña y maracuyá, con notas de manzana verde y cítricos.
+                                En
+                                boca es goloso y fresco, con una burbuja suave, baja graduación alcohólica y un final
+                                vibrante que lo hace ideal como aperitivo o para acompañar postres.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="vinos14">
+                        <div class="titulo">
+                            <h2>LAMBRUSCO</h2>
+                        </div>
+                        <div class="vino">
+
+                            <img class="muestra" src="recursos/vinos/lambrusco.png" alt="">
+                            <p class="descripcion-plato">
+                                Lambrusco es un vino espumoso joven, fresco y afrutado. Presenta aromas vibrantes a
+                                frutos
+                                rojos como fresa, cereza y frambuesa, junto con un ligero toque floral y notas de
+                                hierbas.
+                                En boca es ligero, con una burbuja fina y refrescante, un equilibrio entre dulzura y
+                                acidez,
+                                y un final suave y agradable.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ensaladas seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Ensalada.png" alt="">
+                    <h1>ENSALADAS</h1>
+                </div>
+                <ul>
+                    <li class="ensalada1">
+                        <div class="titulo">
+                            <h2>ENSALADA DE LA CASA</h2>
+                        </div>
+                        <img class="muestra" src="https://casadepaellas.com/wp-content/uploads/2015/11/ensalada.jpg"
+                            alt="">
+                        <p class="descripcion-plato">Lechuga, tomate, cebolla, zanahoria, remolacha, huevo,
+                            esparrago y atún.</p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Pescado.png" alt="pescado">
+                            <img src="recursos/alergenos/Huevos.png" alt="huevo">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Pescado, Huevo</i></p>
+                    </li>
+                    <li class="ensalada2">
+                        <div class="titulo">
+                            <h2>ENSALADA DE RULO</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/Ensalada-rulo.png" alt="">
+                        <p class="descripcion-plato">Lechuga, tomates cherry, nueces, queso de rulo, orégano y vinagre
+                            balsamico de frutos del bosque.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Frutos Secos.png" alt="frutos secos">
+                            <img src="recursos/alergenos/Leche.png" alt="leche"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Frutos Secos, Leche</i></p>
+                    </li>
+                    <li class="ensalada3">
+                        <div class="titulo">
+                            <h2>ENSALADA CÉSAR</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/Ensalada-cesar.png" alt="">
+                        <p class="descripcion-plato">Lechuga, tomates cherry, queso, pollo empanado, y salsa césar.</p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Leche, Gluten, Huevos</i></p>
+                    </li>
+                    <li class="ensalada4">
+                        <div class="titulo">
+                            <h2>ENSALADA DE AHUMADOS</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://twicpics.moulinex.es/https://sebplatform.api.groupe-seb.com/statics/b9e9a209-ed5f-4777-8b2e-adc3a297ea99.JPG?w=1920&fit=scale"
+                            alt="">
+                        <p class="descripcion-plato">Lechuga, tomate, ahumados, frutos secos y vinagre balsámico de
+                            módena.</p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Pescado.png" alt="pescado">
+                            <img src="recursos/alergenos/Frutos Secos.png" alt="frutos secos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Pescado, Frutos Secos</i></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="arroces seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Arroces.png" alt="">
+                    <h1>ARROCES</h1>
+                </div>
+                <ul>
+                    <li class="arroces1">
+                        <div class="titulo">
+                            <h2>ARROZ NEGRO</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/arroz_negro.png" alt="">
+                        <p class="descripcion-plato">Arroz bomba, calamares o sepia, tinta de calamar, caldo de pescado,
+                            cebolla, ajo, pimiento, tomate triturado, aceite de oliva, sal, pimienta, vino blanco,
+                            alioli.</p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="pescado">
+                            <img src="recursos/alergenos/Moluscos.png" alt="moluscos"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado, Moluscos</i>
+                        </p>
+                    </li>
+                    <li class="arroces2">
+                        <div class="titulo">
+                            <h2>PAELLA MIXTA</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/paella-mixta.png" alt="">
+                        <p class="descripcion-plato">Arroz bomba, pollo, conejo, gambas, mejillones, calamares, judía
+                            verde, garrofón, pimiento rojo, tomate triturado, ajo, aceite de oliva, caldo de pollo o
+                            pescado, azafrán, sal, pimienta, limón.</p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="pescado">
+                            <img src="recursos/alergenos/Moluscos.png" alt="moluscos"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado, Moluscos</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="carnes seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Carnes.png" alt="">
+                    <h1>CARNES</h1>
+                </div>
+                <ul>
+                    <li class="carnes1">
+                        <div class="titulo">
+                            <h2>Chuletillas de cordero</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://okdiario.com/img/recetas/2017/10/18/chuletas-de-cordero-al-horno.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="carnes2">
+                        <div class="titulo">
+                            <h2>Chuletón de ternera 1Kg</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://rincondegalicia.es/cdn/shop/products/chuleton-gallego-de-kilo-a-la-piedra-866881.jpg?v=1647253162"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="carnes3">
+                        <div class="titulo">
+                            <h2>Chuletón de vaca vieja</h2>
+                        </div>
+                        <img class="muestra" src="https://imag.bonviveur.com/chuleton-de-vaca-listo-para-degustar.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="carnes4">
+                        <div class="titulo">
+                            <h2>Entrecot de ternera</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://casapote.com/wp-content/uploads/2024/01/entrecot-de-ternera.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="carnes5">
+                        <div class="titulo">
+                            <h2>Cachopo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://tablasdelcampillin.com/wp-content/uploads/2022/04/5-errores-elaboracion-cachopo-1.jpg"
+                            alt="">
+                        <p class="descripcion-plato">Ternera, jamón, queso y pimiento de piquillo</p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Leche, Gluten</i>
+                        </p>
+                    </li>
+                    <li class="carnes6">
+                        <div class="titulo">
+                            <h2>Secreto de cerdo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRUJCzPVEhV-59uLl39CUZWLWAL8IyBeD2IA&s"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="carnes7">
+                        <div class="titulo">
+                            <h2>Costillar a la barbacoa</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/costillar.png" alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="carnes8">
+                        <div class="titulo">
+                            <h2>Solomillo de cerdo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://canalcocina.es/medias/publicuploads/2015/03/29/113917/35365335055181a917aef83.53011052.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="carnes9">
+                        <div class="titulo">
+                            <h2>Lacón a la gallega</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://jetextramar.com/wp-content/uploads/2022/01/Lac%C3%B3n-Asado-700x525.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <!-- <li class="carnes10">
+                        <div class="titulo">
+                            <h2>Mollejas de cordero al ajillo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://okdiario.com/img/2019/12/07/receta-de-mollejas-de-cordero-al-ajillo.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="pescados seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Pescados.png" alt="">
+                    <h1>PESCADOS</h1>
+                </div>
+                <ul>
+                    <li class="pescados1">
+                        <div class="titulo">
+                            <h2>Dorada</h2>
+                        </div>
+                        <img class="muestra" src="https://imag.bonviveur.com/dorada-al-ajillo.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="pescados2">
+                        <div class="titulo">
+                            <h2>Lubina</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://recetasdecocina.elmundo.es/wp-content/uploads/2021/09/lubina-al-horno-con-patatas.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="pescados3">
+                        <div class="titulo">
+                            <h2>Emperador</h2>
+                        </div>
+                        <img class="muestra" src="https://i.ytimg.com/vi/fI3lU8ap7rc/maxresdefault.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                    <li class="pescados3">
+                        <div class="titulo">
+                            <h2>Sepia a la plancha</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://recetasdecocina.elmundo.es/wp-content/uploads/2023/08/sepia-a-la-plancha.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="croquetas seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Croquetas.png" alt="">
+                    <h1>CROQUETAS (9 UND)</h1>
+                </div>
+                <ul>
+                    <li class="croquetas1">
+                        <div class="titulo">
+                            <h2>JAMÓN</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaqaxlHfY-GSyw27-yPnD61903sc788WWGhA&s"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="pescado">
+                            <img src="recursos/alergenos/Huevos.png" alt="moluscos"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Huevos</i>
+                        </p>
+                    </li>
+                    <li class="croquetas2">
+                        <div class="titulo">
+                            <h2>Queso azul</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://saltandoladieta.com/wp-content/uploads/2019/08/croquetas-de-queso-azul-mycook-touch-1140x641.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="pescado">
+                            <img src="recursos/alergenos/Huevos.png" alt="moluscos"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Huevos</i>
+                        </p>
+                    </li>
+                    <li class="croquetas3">
+                        <div class="titulo">
+                            <h2>Rabo de toro</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX7wR_SDV1A9uC5_op53PSY2q-Out7icn4Cwo8Z0cCX_554mjdhk3yre5sugeJhqNx4C21V7VHQ4poKocUO437n47kPY38MQV00M_aTuLQUrHvcz3m6uz_pjyW5wxauq8AU0281HbZZBM/w1200-h630-p-k-no-nu/croqueta_rabo_toro_1.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="pescado">
+                            <img src="recursos/alergenos/Huevos.png" alt="moluscos"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Huevos</i>
+                        </p>
+                    </li>
+                    <li class="croquetas4">
+                        <div class="titulo">
+                            <h2>Boletus</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://s3.ppllstatics.com/eldiariomontanes/www/multimedia/2024/04/15/croquetas-setas-RAlbqQmWsKmgK3ddWoDXgAL-1200x840@Diario%20Montanes.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="pescado">
+                            <img src="recursos/alergenos/Huevos.png" alt="moluscos"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Huevos</i>
+                        </p>
+                    </li>
+                    <li class="croquetas5">
+                        <div class="titulo">
+                            <h2>JAMÓN(sin gluten)</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaqaxlHfY-GSyw27-yPnD61903sc788WWGhA&s"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Leche.png" alt="pescado">
+                            <img src="recursos/alergenos/Huevos.png" alt="moluscos"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp; Leche, Huevos</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="raciones seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Raciones.png" alt="">
+                    <h1>RACIONES</h1>
+                </div>
+                <ul>
+                    <li class="raciones1">
+                        <div class="titulo">
+                            <h2>Huevos rotos con jamón o picadillo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://media-cdn.tripadvisor.com/media/photo-s/0a/78/56/13/j-d-custom-bar.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Huevos.png" alt="moluscos"><br>
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Huevos</i>
+                        </p>
+                    </li>
+                    <li class="raciones2">
+                        <div class="titulo">
+                            <h2>Huevos rotos con gulas</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.annarecetasfaciles.com/files/huevos-rotos-gulas-portada-1-815x458.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescados">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Huevos, Pescado</i>
+                        </p>
+                    </li>
+                    <li class="raciones3">
+                        <div class="titulo">
+                            <h2>Revuelto de morcilla</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://img-global.cpcdn.com/recipes/a8c33486f7bd4934/680x482cq70/revuelto-de-morcilla-foto-principal.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Huevos</i>
+                        </p>
+                    </li>
+                    <li class="raciones4">
+                        <div class="titulo">
+                            <h2>Oreja a la plancha</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://img-global.cpcdn.com/recipes/dd976b9fb447ee3b/1200x630cq70/photo.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                        </div>
+                    </li>
+                    <li class="raciones5">
+                        <div class="titulo">
+                            <h2>Alitas de pollo (12 UND)</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.restaurantesmadridmadriz.es/wp-content/uploads/2020/05/alitas-de-pollo-1.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                        </div>
+                    </li>
+                    <li class="raciones6">
+                        <div class="titulo">
+                            <h2>Pollo al ajillo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6m9e0UTy8WfHHab7xLyIFJVb951inmh3Ckw&s"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                        </div>
+                    </li>
+                    <li class="raciones7">
+                        <div class="titulo">
+                            <h2>Bandidos</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://i.ytimg.com/vi/VOq-Y_48YrQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA7hG6bK_ZUd6Rf4hs3LQG23yzTUg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <li class="raciones8">
+                        <div class="titulo">
+                            <h2>Nuggets de pollo</h2>
+                        </div>
+                        <img class="muestra" src="https://imag.bonviveur.com/nuggets-en-freidora-de-aire.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <li class="raciones9">
+                        <div class="titulo">
+                            <h2>Pollo senda 44</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://img-global.cpcdn.com/recipes/20d963213c50873e/680x482cq70/pollo-estilo-kfc-foto-principal.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                            <img src="recursos/alergenos/Moluscos.png" alt="Moluscos">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                            <img src="recursos/alergenos/Soja.png" alt="Soja">
+                            <img src="recursos/alergenos/Mostaza.png" alt="Mostaza">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Huevo, Moluscos,
+                                Pescado,
+                                Soja, Mostaza, Leche</i>
+                        </p>
+                    </li>
+                    <li class="raciones10">
+                        <div class="titulo">
+                            <h2>Salchipapas</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://comedera.com/wp-content/uploads/sites/9/2021/07/salchipapas.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                        </div>
+                    </li>
+                    <li class="raciones11">
+                        <div class="titulo">
+                            <h2>Patatas Fritas</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.publico.es/ahorro-consumo-responsable/wp-content/uploads/2022/04/fritas-1024x576.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                        </div>
+                    </li>
+                    <li class="raciones12">
+                        <div class="titulo">
+                            <h2>Patatas Bravas</h2>
+                        </div>
+                        <img class="muestra" src="https://i.ytimg.com/vi/5lA5PwjHMjY/sddefault.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                        </div>
+                    </li>
+                    <li class="raciones13">
+                        <div class="titulo">
+                            <h2>Patatas Braviolis</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4V5Yl1emSzctmh4QPljhJ37azYMuSYtKBhGKxlkY0YjAeLyPwdfeNoohV8jKv7N4bdcI&usqp=CAU"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Leche</i>
+                        </p>
+                    </li>
+                    <li class="raciones14">
+                        <div class="titulo">
+                            <h2>Patatas Bacon Cheese</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.annarecetasfaciles.com/files/patatas-beicon-queso-estilo-fosters.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Leche</i>
+                        </p>
+                    </li>
+                    <li class="raciones15">
+                        <div class="titulo">
+                            <h2>Finger Mozzarella</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://fuentesmar.es/wp-content/uploads/2021/01/fingers-de-mozzarella-1200-amp.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Leche, Gluten</i>
+                        </p>
+                    </li>
+                    <li class="raciones16">
+                        <div class="titulo">
+                            <h2>Jalapeños</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxDwU9tA-nRTPhojOno91Jdp2tmURBrBWkcDhts1jlFu9Efq2DFTQyLRLtX-ldGVc0UlI&usqp=CAU"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Leche, Gluten</i>
+                        </p>
+                    </li>
+                    <li class="raciones17">
+                        <div class="titulo">
+                            <h2>Calamares</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.pequerecetas.com/wp-content/uploads/2018/12/calamares-andaluza.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado</i>
+                        </p>
+                    </li>
+                    <li class="raciones18">
+                        <div class="titulo">
+                            <h2>Chopitos</h2>
+                        </div>
+                        <img class="muestra" src="https://imag.bonviveur.com/chopitos-fritos-rebozados.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado</i>
+                        </p>
+                    </li>
+                    <li class="raciones19">
+                        <div class="titulo">
+                            <h2>Gambas al ajillo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.paulinacocina.net/wp-content/uploads/2023/03/receta-gambas-al-ajillo-1200x900.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Pescado</i>
+                        </p>
+                    </li>
+                    <li class="raciones20">
+                        <div class="titulo">
+                            <h2>Boquerones Fritos</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.chaopescaoseafood.com/wp-content/uploads/2023/07/boquerones.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Pescado, Gluten</i>
+                        </p>
+                    </li>
+                    <li class="raciones21">
+                        <div class="titulo">
+                            <h2>Gambas a la gabardina</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://imagenes.elpais.com/resizer/v2/DEPTRVD5YNCTTO6AL5ZNVKAHGQ.jpg?auth=c1d37db05b7ae73bc2c01202b667bed46c363b539bebe9f0ddb5cffd888ba154&width=980&height=980&smart=true"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Moluscos.png" alt="Moluscos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Soja.png" alt="Soja">
+                            <img src="recursos/alergenos/Mostaza.png" alt="Mostaza">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Pescado, Gluten</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="baguettes seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Baguettes.png" alt="">
+                    <h1>BAGUETTES</h1>
+                </div>
+                <ul>
+                    <li class="baguettes1">
+                        <div class="titulo">
+                            <h2>Baguette de Lomo y Queso</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://pizzbur.com/pedidoonline/374-large_default/bocadillo-de-lomo-con-queso.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="baguettes2">
+                        <div class="titulo">
+                            <h2>Baguette de Bacon y Queso</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://pizzbur.com/pedidoonline/372-large_default/bocadillo-de-bacon-con-queso.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="baguettes3">
+                        <div class="titulo">
+                            <h2>Baguette de Calamares</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://pizzbur.com/pedidoonline/376-large_default/bocadillo-de-calamares.jpg" alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado</i>
+                        </p>
+                    </li>
+                    <li class="baguettes4">
+                        <div class="titulo">
+                            <h2>Baguette de jamón y tomate</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://pizzbur.com/pedidoonline/368-large_default/bocadillo-de-jamon-con-tomate.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <li class="baguettes5">
+                        <div class="titulo">
+                            <h2>Baguette de panceta</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.shutterstock.com/image-photo/crispy-bacon-baguette-tomato-ketchup-260nw-71325937.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <li class="baguettes6">
+                        <div class="titulo">
+                            <h2>Baguette de pollo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://pizzbur.com/pedidoonline/382-large_default/bocadillo-de-pechuga-de-pollo-rebozada-con-bacon-completo.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <li class="baguettes7">
+                        <div class="titulo">
+                            <h2>Baguette de pepito de ternera</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://pizzbur.com/pedidoonline/383-large_default/pepito-de-ternera-completo.jpg"
+                            alt="">
+                        <p class="descripcion-plato"></p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <li class="baguettes8">
+                        <div class="titulo">
+                            <h2>Baguette vegetal</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://todotortillas.es/wp-content/uploads/2020/02/bocadillo_vegetal.jpg" alt="">
+                        <p class="descripcion-plato">
+                            Mayonesa, lechuga, tomate, cebolla, atún, huevo y esparrago.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado, Leche</i>
+                        </p>
+                    </li>
+                    <li class="baguettes9">
+                        <div class="titulo">
+                            <h2>Baguette de atún y pimientos rojos</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.annarecetasfaciles.com/files/bocadillo-de-lomo-con-pimientos-11.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado</i>
+                        </p>
+                    </li>
+                    <li class="baguettes10">
+                        <div class="titulo">
+                            <h2>Baguette de boquerones, anchoas y queso</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://i0.wp.com/pedrochesgastronomia.com/wp-content/uploads/2023/02/Matrimonio-800x600.webp?resize=800%2C600&ssl=1"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="sandwichs seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Sandwich.png" alt="">
+                    <h1>SANDWICHS</h1>
+                </div>
+                <ul>
+                    <li class="sandwichs1">
+                        <div class="titulo">
+                            <h2>Sándwich Mixto</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://s1.elespanol.com/2020/04/23/ciencia/nutricion/alimentacion-dieta-obesidad_484713861_150852066_1706x960.jpg"
+                            alt="">
+                        <p class="descripcion-plato">Jamón york y queso.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="sandwichs2">
+                        <div class="titulo">
+                            <h2>Sándwich Mixto con Huevo</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://i.ytimg.com/vi/EAGO4nkThu0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLANGd3EWGQhc12cMQWtyYx3684B8w"
+                            alt="">
+                        <p class="descripcion-plato">Jamón york,queso y huevo.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Huevo</i>
+                        </p>
+                    </li>
+                    <li class="sandwichs3">
+                        <div class="titulo">
+                            <h2>SÁNDWICH VEGETAL</h2>
+                        </div>
+                        <img class="muestra" src="https://imag.bonviveur.com/sandwich-vegetal-listo-para-comer.jpg"
+                            alt="">
+                        <p class="descripcion-plato">Mayonesa, lechuga, cebolla, tomate, atún, huevo y esparrago.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado, Huevo</i>
+                        </p>
+                    </li>
+                    <li class="sandwichs4">
+                        <div class="titulo">
+                            <h2>SÁNDWICH MIXTO VEGETAL</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.asantasede.com/cdn/shop/products/sandwich_vegetal.jpg?v=1589132252" alt="">
+                        <p class="descripcion-plato">Jamón york, queso, mayonesa, lechuga, cebolla, tomate, atún, huevo
+                            y esparrago.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Pescado,
+                                Huevo</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tostas seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Tostas.png" alt="">
+                    <h1>TOSTAS</h1>
+                </div>
+                <ul>
+                    <li class="tostas1">
+                        <div class="titulo">
+                            <h2>Tosta de solomillo al romero con salsa de limón</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://img-global.cpcdn.com/recipes/d7c9316563aa01c7/680x482cq70/tosta-de-solomillo-iberico-con-queso-brie-cebolla-caramelizada-y-crujientes-de-nueces-foto-principal.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <li class="tostas2">
+                        <div class="titulo">
+                            <h2>Tosta de queso de rulo con mermelada</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://i.ytimg.com/vi/0o0uAIKCz2M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLChwV4QgdX4-l19Oz9gKZ5kdd36aQ"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="tostas3">
+                        <div class="titulo">
+                            <h2>Tosta de chipirones con alioli</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://canalcocina.es/medias/publicuploads/2016/03/26/46833/62559299856f6b6b29bf0d3.89192727.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Pescado</i>
+                        </p>
+                    </li>
+                    <li class="tostas4">
+                        <div class="titulo">
+                            <h2>Tosta de gulas con gambas</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Tostas_de_gula_con_gambas_al_ajillo_-_xurde.jpg/330px-Tostas_de_gula_con_gambas_al_ajillo_-_xurde.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                            <img src="recursos/alergenos/Moluscos.png" alt="Moluscos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Pescado, Moluscos</i>
+                        </p>
+                    </li>
+                    <li class="tostas5">
+                        <div class="titulo">
+                            <h2>Tosta thai</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/tosta-thai.png" alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Huevo</i>
+                        </p>
+                    </li>
+                    <li class="tostas6">
+                        <div class="titulo">
+                            <h2>Tosta de secreto iberico</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://img-global.cpcdn.com/recipes/e16953b899827a49/680x482cq70/bocata-de-secreto-iberico-gratinado-pimiento-asado-y-huevo-frito-con-cebolla-caramelizada-foto-principal.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <!--                     <li class="tostas7">
+                        <div class="titulo">
+                            <h2>Tosta de boquerones, anchoas y queso</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://img-global.cpcdn.com/recipes/83bc2d36c0eefa50/1200x630cq70/photo.jpg" alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Pescado.png" alt="Pescado">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Pescado</i>
+                        </p>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="hamburguesas seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Hamburguesas.png" alt="">
+                    <h1>HAMBURGUESAS</h1>
+                </div>
+                <ul>
+                    <div class="info hamburguesas">
+                        <span class="span1">INGREDIENTE EXTRA (1.00€)</span>
+                        <span class="span2">PATATAS (1.00€)</span>
+                    </div>
+                    <li class="hamburguesas1">
+                        <div class="titulo">
+                            <h2>Hamburguesa</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2uBjpEIoxEa_7tFCfpczG9X2CWtkbyfyOA&s"
+                            alt="">
+                        <p class="descripcion-plato">
+                            Carne, lechuga, cebolla y tomate
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Sesamo.png" alt="Sesamo">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Sésamo, Leche</i>
+                        </p>
+                    </li>
+                    <li class="hamburguesas2">
+                        <div class="titulo">
+                            <h2>Hamburguesa con queso</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQekPbOnwB7779EqINhoPe_Dga65gyUmigzMg&s"
+                            alt="">
+                        <p class="descripcion-plato">
+                            Carne, queso, lechuga, cebolla y tomate
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Sesamo.png" alt="Sesamo">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Sésamo, Leche</i>
+                        </p>
+                    </li>
+                    <li class="hamburguesas3">
+                        <div class="titulo">
+                            <h2>Hamburguesa queso bacon</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://recetastradicionales.wordpress.com/wp-content/uploads/2012/07/dsc052421.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                            Carne, queso, bacon lechuga, cebolla y tomate
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Sesamo.png" alt="Sesamo">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Sésamo, Leche</i>
+                        </p>
+                    </li>
+                    <li class="hamburguesas4">
+                        <div class="titulo">
+                            <h2>Hamburguesa queso bacon huevo</h2>
+                        </div>
+                        <img class="muestra" src="https://mesonlacartujadecadiz.es/wp-content/uploads/2020/07/buger.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                            Carne, queso, bacon, huevo, lechuga, cebolla y tomate
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Sesamo.png" alt="Sesamo">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Sésamo, Leche,
+                                Huevo</i>
+                        </p>
+                    </li>
+                    <li class="hamburguesas5">
+                        <div class="titulo">
+                            <h2>Hamburguesa krispy chicken</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/Hamburguesa-krispy.png" alt="">
+                        <p class="descripcion-plato">
+                            Pollo, lechuga y tomate
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Sesamo.png" alt="Sesamo">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Sésamo, Leche</i>
+                        </p>
+                    </li>
+                    <li class="hamburguesas6">
+                        <div class="titulo">
+                            <h2>Hamburguesa ciervo en pan brioche</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.pinchos-canapes.com/wp-content/uploads/2021/04/hamburguesadeciervo-1024x685.jpeg"
+                            alt="">
+                        <p class="descripcion-plato">
+                            Carne de ciervo, queso de rulo, cebolla caramelizada,salsa miel y mostaza, tomate y lechuga
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Mostaza.png" alt="Mostaza">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Mostaza</i>
+                        </p>
+                    </li>
+                    <li class="hamburguesas7">
+                        <div class="titulo">
+                            <h2>Hamburguesa angus en pan brioche</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://comecomezaragoza.es/wp-content/uploads/2023/02/unknown_323501930_930610264573755_2975741846668998570_n-1024x1024.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                            Carne angus, queso de rulo, cebolla caramelizada, salsa miel y mostaza, jamon serrano,
+                            tomate y lechuga
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Mostaza.png" alt="Mostaza">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Mostaza</i>
+                        </p>
+                    </li>
+                    <li class="hamburguesas8">
+                        <div class="titulo">
+                            <h2>Hamburguesa de buey 100% (220g)</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/hamburguesa-buey.png" alt="">
+                        <p class="descripcion-plato">
+                            Carne de buey, queso, cebolla, salsa de la casa, tomate y lechuga
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="pizzas seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Pizzas.png" alt="">
+                    <h1>PIZZAS</h1>
+                </div>
+                <ul>
+                    <div class="info pizzas">
+                        <span>INGREDIENTE EXTRA (1.00€)</span>
+                    </div>
+                    <li class="pizzas1">
+                        <div class="titulo">
+                            <h2>Pizza barbacoa</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://lh3.googleusercontent.com/proxy/1PbiECKNLw09JeOZbKAzTyxWrsruSXqAfPk41Ocvultl2kv_ZZOloPTh8k_wYD1XHCJes7lfe_WauD-Z4NHWcpHKQn6_PWtfYrnd9tBXmA1ed-0PoVrcd4bnuaF5ag"
+                            alt="">
+                        <p class="descripcion-plato">Base de tomate, queso, carne picada, cebolla, maiz, bacon y salsa
+                            barbacoa
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="pizzas2">
+                        <div class="titulo">
+                            <h2>Pizza pepperoni</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.sortirambnens.com/wp-content/uploads/2019/02/pizza-de-peperoni.jpg" alt="">
+                        <p class="descripcion-plato">Base de tomate, queso, pepperoni y oregano
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="pizzas3">
+                        <div class="titulo">
+                            <h2>Pizza cuatro quesos</h2>
+                        </div>
+                        <img class="muestra" src="https://www.novachef.es/media/images/pizza-cuatro-quesos.jpg" alt="">
+                        <p class="descripcion-plato">Base de tomate y cuatro quesos
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="pizzas4">
+                        <div class="titulo">
+                            <h2>Pizza de verduras</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://img.freepik.com/fotos-premium/pizza-verduras-cortada-cuna-disparo-arriba-aislado-mesa-madera_109656-894.jpg"
+                            alt="">
+                        <p class="descripcion-plato">Base de tomate, queso, pimiento rojo y verde, cebolla, tomate
+                            cherry, champiñón y aceitunas negras.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="pizzas5">
+                        <div class="titulo">
+                            <h2>Pizza hawaiana</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxSt_YCAdPJNLYCZhwjDdS9-XElw6OS7AMDg&s"
+                            alt="">
+                        <p class="descripcion-plato">Base de tomate, queso, jamón, piña y oregano.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="pizzas6">
+                        <div class="titulo">
+                            <h2>Pizza jamón y queso</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://valledearas.com/wordpress/wp-content/uploads/2023/03/pizza-jamon-serrano.jpg"
+                            alt="">
+                        <p class="descripcion-plato">Base de tomate, queso, jamón y oregano.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="pizzas7">
+                        <div class="titulo">
+                            <h2>Pizza serrana</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.silviocicchi.com/pizzachef/wp-content/uploads/2015/01/crudo1.jpg" alt="">
+                        <p class="descripcion-plato">Base de tomate, queso, jamón serrano, aceitunas negras y oregano
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="pizzas8">
+                        <div class="titulo">
+                            <h2>Pizza carnivora</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://pizzamia.pe/cdn/shop/files/PZM-SaborCarnivoraCenital-01_800x.jpg?v=1691105027"
+                            alt="">
+                        <p class="descripcion-plato">Base de tomate, queso, jamón serrano, carne picada,picadillo y
+                            bacon.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="pizzas9">
+                        <div class="titulo">
+                            <h2>Pizza kebab</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/pizza-kebab.jpg" alt="">
+                        <p class="descripcion-plato">Base de tomate, salsa kebab, queso, carne kebab y cebolla.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="postres seccion">
+                <div class="titulo_principal">
+                    <img src="recursos/emojis-secciones/Postres.png" alt="">
+                    <h1>POSTRES</h1>
+                </div>
+                <ul>
+                    <li class="postres1">
+                        <div class="titulo">
+                            <h2>Coulant de chocolate</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Chocolate_Fondant.jpg" alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="postres2">
+                        <div class="titulo">
+                            <h2>Coulant de queso</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.mardequel.com/775-product_medium_default/coulant-de-tarta-de-queso.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="postres3">
+                        <div class="titulo">
+                            <h2>Coulant de chocolate blanco</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://okdiario.com/img/2018/04/24/coulant-de-chocolate-blanco-receta-de-postre-deliciosa-655x368.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="postres4">
+                        <div class="titulo">
+                            <h2>Brownie</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/brownie.png" alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Frutos Secos.png" alt="Frutos Secos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Frutos
+                                Secos</i>
+                        </p>
+                    </li>
+                    <li class="postres5">
+                        <div class="titulo">
+                            <h2>Gofre</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://gourmet.expob2b.es/uploads/fotos_noticias/2023/07/w800px_28002-219838-que-sabemos-de-los-gofres.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                            <strong>Nata / Sirope:</strong> chocolate negro o blanco, fresa, caramelo, frutos del bosque
+                            y vainilla
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten</i>
+                        </p>
+                    </li>
+                    <li class="postres6">
+                        <div class="titulo">
+                            <h2>Tortitas</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/tortitas.png" alt="">
+                        <p class="descripcion-plato">
+                            <strong>Nata / Sirope:</strong> chocolate negro o blanco, fresa, caramelo, frutos del bosque
+                            y vainilla
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="postres7">
+                        <div class="titulo">
+                            <h2>Tarta de queso</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/tarta-queso.jpg" alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="postres8">
+                        <div class="titulo">
+                            <h2>Torrija de pan brioche</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://i0.wp.com/www.enunaservilleta.es/wp-content/uploads/2013/03/torrijas-de-brioche.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche</i>
+                        </p>
+                    </li>
+                    <li class="postres9">
+                        <div class="titulo">
+                            <h2>Crepe de chocolate</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://delantaldealces.com/wp-content/uploads/2015/02/crepes-veganas-chocolate.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Huevo</i>
+                        </p>
+                    </li>
+                    <li class="postres10">
+                        <div class="titulo">
+                            <h2>Fondant de baileys</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://www.ranson.be/assets/uploads/psinfood/_1000x1000_crop_center-center_none/297449.jpg?v=1672124039"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                            <img src="recursos/alergenos/Soja.png" alt="Soja">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Huevos,
+                                Soja</i>
+                        </p>
+                    </li>
+                    <li class="postres11">
+                        <div class="titulo">
+                            <h2>Brookies</h2>
+                        </div>
+                        <img class="muestra" src="https://ourbestbites.com/wp-content/uploads/2019/05/UB5A6226-3.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                            <strong>Helado:</strong> fresa, nata, chocolate o vainilla.
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Frutos Secos.png" alt="Frutos Secos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Leche, Frutos
+                                Secos</i>
+                        </p>
+                    </li>
+                    <li class="postres12">
+                        <div class="titulo">
+                            <h2>Tarta de manzana</h2>
+                        </div>
+                        <img class="muestra"
+                            src="https://yhoyquecomemos.com/wp-content/uploads/2017/01/tarta-de-manzana-receta-1.jpg"
+                            alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Frutos Secos.png" alt="Frutos Secos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Frutos Secos</i>
+                        </p>
+                    </li>
+                    <li class="postres13">
+                        <div class="titulo">
+                            <h2>Coulant de Lotus</h2>
+                        </div>
+                        <img class="muestra" src="recursos/platos/coulant-lotus.wepb" alt="">
+                        <p class="descripcion-plato">
+                        </p>
+                        <div class="alergenos">
+                            <img src="recursos/alergenos/Gluten.png" alt="Gluten">
+                            <img src="recursos/alergenos/Soja.png" alt="Soja">
+                            <img src="recursos/alergenos/Leche.png" alt="Leche">
+                            <img src="recursos/alergenos/Huevos.png" alt="Huevos">
+                        </div>
+                        <p class="texto-alergenos"><strong>CONTIENE <br></strong><i>&nbsp;Gluten, Soja, Leche,
+                                Huevos</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>SUPLEMENTO DE TERRAZA</p>
+            <div class="info pie">
+                <span class="span1">BEBIDAS (0,20€)</span>
+                <span class="span2">COMIDAS (0,50€)</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { precios } from './js/precios.js';
+        import { titulos } from './js/titulos.js';
+        import { ensaladas } from './js/ensaladas.js';
+        import { arroces } from './js/arroces.js';
+        import { carnes } from './js/carnes.js';
+        import { pescados } from './js/pescados.js';
+        import { croquetas } from './js/croquetas.js';
+        import { raciones } from './js/raciones.js';
+        import { baguettes } from './js/baguettes.js';
+        import { sandwichs } from './js/sandwich.js';
+        import { tostas } from './js/tostas.js';
+        import { hamburguesas } from './js/hamburguesas.js';
+        import { pizzas } from './js/pizzas.js';
+        import { postres } from './js/postres.js';
+        import { vinos } from './js/vinos.js';
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const titulos = document.querySelectorAll('.titulo_principal');
+
+            titulos.forEach(titulo => {
+                const contenido = titulo.nextElementSibling;
+                if (contenido) {
+                    contenido.style.display = 'none';
+                }
+
+                titulo.addEventListener('click', () => {
+                    if (contenido.style.display === 'none') {
+                        const letras_titulo = titulo.querySelector('.titulo_principal h1');
+                        letras_titulo.style.display = "block";
+                        titulo.parentElement.style.width = "100%";
+                        titulo.style.borderRadius = 0;
+                        titulo.style.maxWidth = "100%";
+                        contenido.style.display = 'flex';
+                        contenido.style.flexDirection = 'column';
+                        document.querySelector('.productos').style.paddingBottom = '11.2vh';
+                        document.querySelectorAll('.productos .seccion').forEach(item => item.classList.add('margen'));
+                    } else {
+                        const letras_titulo = titulo.querySelector('.titulo_principal h1');
+                        letras_titulo.style.display = "none";
+                        titulo.style.borderRadius = "50%";
+                        titulo.style.maxWidth = "max-content";
+                        titulo.parentElement.style.width = "25%";
+                        contenido.style.display = 'none';
+                        document.querySelector('.productos').style.marginBottom = '0vh';
+                        document.querySelectorAll('.productos .seccion').forEach(item => item.classList.remove('margen'));
+                    }
+                });
+            });
+        });
+
+
+
+        // insertarPrecios.js
+
+        document.addEventListener('DOMContentLoaded', () => {
+            for (const selector in precios) {
+                const { sala, terraza } = precios[selector];
+                const elementos = document.querySelectorAll(selector);
+
+                elementos.forEach((elemento) => {
+                    const li = elemento.tagName === 'LI' ? elemento : elemento.closest('li');
+                    if (!li) return;
+                    const precios = document.createElement('div');
+                    precios.className = 'precios';
+                    li.appendChild(precios);
+                    // Contenedor de precio para SALA
+                    const divSala = document.createElement('div');
+                    divSala.className = 'precio-articulo';
+
+                    const textoSala = document.createElement('span');
+                    textoSala.className = 'precio-sala';
+                    textoSala.innerHTML = '<span>SALA</span>';
+                    divSala.appendChild(textoSala);
+
+                    const valorSala = document.createElement('span');
+                    valorSala.textContent = sala;
+                    divSala.appendChild(valorSala);
+
+                    precios.appendChild(divSala);
+
+                    // Contenedor de precio para TERRAZA
+                    const divTerraza = document.createElement('div');
+                    divTerraza.className = 'precio-articulo';
+
+                    const textoTerraza = document.createElement('span');
+                    textoTerraza.className = 'precio-terraza';
+                    textoTerraza.innerHTML = '<span>TERRAZA</span>';
+                    divTerraza.appendChild(textoTerraza);
+
+                    const valorTerraza = document.createElement('span');
+                    valorTerraza.textContent = terraza;
+                    divTerraza.appendChild(valorTerraza);
+
+                    precios.appendChild(divTerraza);
+                });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const titulo = document.querySelectorAll('.titulo h2');
+            titulo.forEach(item => {
+                item.textContent = item.textContent.toUpperCase();
+            })
+
+            const esBtn = document.querySelector('nav img[alt="Español"]');
+            const enBtn = document.querySelector('nav img[alt="Inglés"]');
+            const frBtn = document.querySelector('nav img[alt="Francés"]');
+
+            esBtn.addEventListener('click', () => {
+                // Traducir títulos principales
+                titulos.forEach(item => {
+                    const el = document.querySelector(item.selector);
+                    if (el) el.textContent = item.es;
+                });
+
+                ensaladas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                arroces.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                carnes.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                pescados.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                croquetas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                raciones.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                baguettes.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                sandwichs.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                tostas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                hamburguesas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                pizzas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                postres.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.innerHTML = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+                vinos.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.es.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.innerHTML = item.es.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENE <br></strong>&nbsp;<i> ${item.es.allergens.join(", ")}</i>`;
+                });
+
+
+                document.querySelector('.info.pizzas span').textContent = 'INGREDIENTE EXTRA (1.00€)';
+
+                document.querySelector('.info.hamburguesas .span1').textContent = 'INGREDIENTE EXTRA (1.00€)';
+
+                document.querySelector('.info.hamburguesas .span2').textContent = 'PATATAS (1.00€)';
+
+                document.querySelector('.footer p').textContent = 'SUPLEMENTO DE TERRAZA';
+
+                document.querySelector('.footer .span1').textContent = 'BEBIDAS (0,20€)';
+
+                document.querySelector('.footer .span2').textContent = 'COMIDAS (0,50€)';
+
+
+            });
+
+            enBtn.addEventListener('click', () => {
+                titulos.forEach(item => {
+                    const el = document.querySelector(item.selector);
+                    if (el) el.textContent = item.en;
+                });
+
+                ensaladas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                arroces.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                carnes.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                pescados.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                croquetas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                raciones.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                baguettes.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                sandwichs.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                tostas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                hamburguesas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                pizzas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                postres.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.innerHTML = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                vinos.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.en.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.innerHTML = item.en.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTAINS <br></strong>&nbsp;<i> ${item.en.allergens.join(", ")}</i>`;
+                });
+
+                document.querySelector('.info.pizzas span').textContent = 'EXTRA INGREDIENT (1.00€)';
+
+                document.querySelector('.info.hamburguesas .span1').textContent = 'EXTRA INGREDIENT (1.00€)';
+
+                document.querySelector('.info.hamburguesas .span2').textContent = 'POTATOES (1.00€)';
+
+                document.querySelector('.footer p').textContent = 'TERRACE SUPPLEMENT';
+
+                document.querySelector('.footer .span1').textContent = 'DRINKS (0,20€)';
+
+                document.querySelector('.footer .span2').textContent = 'MEALS (0,50€)';
+            });
+
+            frBtn.addEventListener('click', () => {
+                titulos.forEach(item => {
+                    const el = document.querySelector(item.selector);
+                    if (el) el.textContent = item.fr;
+                });
+
+                ensaladas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                arroces.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                carnes.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                pescados.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                croquetas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                raciones.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                baguettes.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                sandwichs.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                tostas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                hamburguesas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                pizzas.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.textContent = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                postres.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.innerHTML = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                vinos.forEach(item => {
+                    const titleEl = document.querySelector(item.selectorTitle);
+                    const descriptionEl = document.querySelector(item.selectorDescription);
+                    const allergensEl = document.querySelector(item.selectorAllergens);
+
+                    if (titleEl) titleEl.textContent = item.fr.title.toUpperCase();
+                    if (descriptionEl) descriptionEl.innerHTML = item.fr.description;
+                    if (allergensEl) allergensEl.innerHTML = `<strong>CONTIENT <br></strong>&nbsp;<i> ${item.fr.allergens.join(", ")}</i>`;
+                });
+
+                document.querySelector('.info.pizzas span').textContent = 'INGRÉDIENT SUPPLÉMENTAIRE (1.00€)';
+
+                document.querySelector('.info.hamburguesas .span1').textContent = 'INGRÉDIENT SUPPLÉMENTAIRE (1.00€)';
+
+                document.querySelector('.info.hamburguesas .span2').textContent = 'POMMES DE TERRE (1.00€)';
+
+                document.querySelector('.footer p').textContent = 'SUPPLÉMENT TERRASSE';
+
+                document.querySelector('.footer .span1').textContent = 'BOISSONS (0,20€)';
+
+                document.querySelector('.footer .span2').textContent = 'REPAS (0,50€)';
+
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
