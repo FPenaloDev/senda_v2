@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     font-family: 'Cal Sans', sans-serif;
-    background: #222e60;
+    background: rgba(128, 128, 128, 0.458);
 }
 
 .app {
@@ -18,10 +18,8 @@ body {
     height: max-content;
     position: relative;
     overflow: hidden;
-    padding-top: 10vh;
+    padding-top: 9.25vh;
     background: #000;
-    border-left: 15px solid #fff;
-    border-right: 15px solid #fff;
 }
 
 .carrusel {
@@ -56,20 +54,20 @@ nav {
     background: #000000d2;
     border-radius: 0 0 150px 150px;
     z-index: 3;
-    width: calc(100% - 30px);
+    width: 100%;
     height: 8.5vh;
     padding: 5px 0;
-    left: 15px;
+
 }
 
 .footer {
     height: 9vh;
     position: fixed;
     bottom: 0;
-    left:15px;
-    width: calc(100% - 30px);
+    width: 97%;
     background: #000000d2;
     color: #fff;
+    padding: 0 1vh;
     font-size: 35px;
     justify-content: space-around;
     align-items: center;
@@ -106,25 +104,8 @@ h1 {
 }
 
 .productos {
-    min-height: 41.2vh;
-    padding-bottom: 11.2vh;
-    background: #222e60;
-    display: flex;
-    flex-wrap: wrap;
-    border: 15px solid #fff;
-    border-bottom:none;
-    width:100%;
-
-    .vinos,
-    .ensaladas,
-    .arroces,
-    .carnes {
-        margin-top: 40px;
-    }
-}
-
-.margen {
-    margin: 0 !important;
+    padding-bottom: 9vh;
+    background: #000;
 }
 
 .info {
@@ -148,7 +129,7 @@ h1 {
         padding: 5px;
         color: #fff;
         border-radius: 10px;
-        font-size: 35px;
+        font-size:35px;
     }
 }
 
@@ -166,8 +147,9 @@ h1 {
 }
 
 .seccion {
-    margin: 20px auto;
-    width: 25%;
+    background: #fff !important;
+    border: 5px solid #000;
+    border-top: 6px solid #332f2f;
 
     ul {
         margin: 0;
@@ -215,12 +197,11 @@ li .muestra {
 
     background: #b75a03;
     border-bottom: 2px solid #332f2f;
-    border-radius: 50%;
     cursor: pointer;
     display: flex;
     justify-content: left;
     align-items: center;
-    max-width: max-content;
+    max-width: 100%;
     height: 8vh;
     padding: 0 20px;
     margin: auto;
@@ -231,10 +212,10 @@ li .muestra {
         margin: 0;
         font-size: 60px;
         text-align: left;
-        display: none;
     }
 
     img {
+        margin-left: 2vh;
         max-width: 6vh;
         object-fit: contain;
     }
@@ -283,18 +264,17 @@ li p {
 }
 
 .precios {
-    max-width: 90%;
+    max-width:90%;
     display: flex;
     justify-content: space-between;
     margin: auto;
 }
-
 .precio-articulo {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 45px;
     color: #fff;
-    background: #222e60;
+    background:#222e60;
     border: 1px solid #e0e0e0;
     border-radius: 30px;
     padding: 12px 22px;
@@ -306,16 +286,21 @@ li p {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
-.precio-sala,
-.precio-terraza {
-    width: max-content;
+.precio-sala,.precio-terraza {
+    width:max-content;
     display: flex;
     align-items: center;
-    margin-right: 0.3em;
+    margin-right:0.3em;
 }
 
+.ensaladas {
+    border-top: 6px solid #332f2f;
+}
 
 .vinos {
+    .titulo_principal {
+        border-bottom: 5px solid #332f2f;
+    }
 
     .muestra {
         aspect-ratio: 9/16;
@@ -356,7 +341,7 @@ li p {
             margin: 0 auto;
             padding: 0 5% 0 2.5%;
             font-size: 40px;
-            max-width: 65% !important;
+            max-width:65% !important;
 
         }
     }
